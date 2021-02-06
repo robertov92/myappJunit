@@ -16,23 +16,56 @@ public class ProgramTest {
         // act
         int result = calculator.add(a, b);
 
-        // asserts                                   // Because of our test arrangement...
-        Assert.assertEquals(20, result);        // We expect the result value of the add() method to be 20
-        Assert.assertNotEquals(21, result);   // We don't expect the result of add() to be 21
-        Assert.assertNotNull(calculator);               // The calculator object isn't null
-        Assert.assertSame(a, b);                        // We expect a and b to be the same because of their value
-        Assert.assertFalse(result < a);         // Result isn't greater than a
-        Assert.assertTrue(b < result);          // b is greater than result
+        // asserts
+        // Because of our test arrangement...
+
+        // We expect the result value of the add() method to be 20
+        Assert.assertEquals(20, result);
+
+        // We don't expect the result of add() to be 21
+        Assert.assertNotEquals(21, result);
+
+        // The calculator object isn't null
+        Assert.assertNotNull(calculator);
+
+        // We expect a and b to be the same because of their value
+        Assert.assertSame(a, b);
+
+        // Result isn't greater than a
+        Assert.assertFalse(result < a);
+
+        // b is greater than result
+        Assert.assertTrue(b < result);
     }
 
     @Test
-    public void testArray(){
-        // arrange & act
-        int[] expected = {1,2,3};
-        int[] actual = { 1, 2, 3 };
+    public void testSubtract(){
+        // arrange
+        int a = 10;
+        int b = 10;
+
+        // act
+        int result = calculator.subtract(a, b);
 
         // asserts
-        Assert.assertArrayEquals(expected, actual);     // Both arrays contain the same values in the same order
-        Assert.assertNotSame(expected, actual);         // Expected and actual are different objects
+        // Because of our test arrangement...
+
+        // We expect the result value of the subtract() method to be 0
+        Assert.assertEquals(0, result);
+
+        // We don't expect the result of subtract() to be 1
+        Assert.assertNotEquals(21, result);
+
+        // The calculator object isn't null
+        Assert.assertNotNull(calculator);
+
+        // We expect a and b to be the same because of their value
+        Assert.assertSame(a, b);
+
+        // Result isn't greater than a
+        Assert.assertFalse(result > a);
+
+        // b is greater than result
+        Assert.assertTrue(b > result);
     }
 }
