@@ -3,7 +3,7 @@ package villanueva;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class ProgramTest {
+public class CalculatorTest {
 
     Calculator calculator = new Calculator();
 
